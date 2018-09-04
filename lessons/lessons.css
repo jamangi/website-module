@@ -59,6 +59,8 @@ header #select {
     border: 1px solid green;
     padding: 5px;
     opacity: 1;
+
+    overflow-y: scroll;
 }
 
 #select:hover, #logo:hover {

@@ -22,8 +22,8 @@ function dummydata(){
 
     for (start; start < finish; start++)
         data.push({
-            "number": 0, 
-            "title": "Locked", 
+            "number": "locked", 
+            "title": "", 
             "purpose": "",
             "link": "#",
             "image": "http://noblemansion.online/assets/Lock.png",
@@ -58,6 +58,34 @@ function populateLessons() {
     }
 }
 
+function activateLessonSelect() {
+    let lessons = document.getElementsByClassName("lesson")
+    for (let lesson of lessons){
+        lesson.addEventListener("mouseenter", populateLessonSelect)
+        lesson.addEventListener("mouseleave", emptyLessonSelect)
+    }
+}
+
+function populateLessonSelect() {
+    let number = document.getElementById("lesson-number")
+    let title = document.getElementById("lesson-title")
+    let purpose = document.getElementById("lesson-purpose")
+
+    number.innerHTML = "Lesson " + this.getAttribute("data-number")
+    title.innerHTML = this.getAttribute("data-title")
+    purpose.innerHTML = this.getAttribute("data-purpose")
+}
+
+function emptyLessonSelect() {
+    let number = document.getElementById("lesson-number")
+    let title = document.getElementById("lesson-title")
+    let purpose = document.getElementById("lesson-purpose")
+
+    number.innerHTML = ""
+    title.innerHTML = ""
+    purpose.innerHTML = ""
+}
+
 function loadLessons() {
     let url = "http://noblemansion.online/data/lessons.json"
     let xhttp = new XMLHttpRequest();
@@ -70,6 +98,7 @@ function loadLessons() {
             }
 
             populateLessons()
+            activateLessonSelect()
           
         }
     };
