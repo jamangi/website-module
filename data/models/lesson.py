@@ -13,5 +13,6 @@ class Lesson(BaseModel):
     number = 0
     title = ''
     purpose = ''
+    image = 'http://noblemansion.online/assets/Lock.png'
     link = '#'
     visits = {} # str ip : int count
