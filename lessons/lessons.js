@@ -26,7 +26,7 @@ function dummydata(){
             "title": "", 
             "purpose": "",
             "link": "#",
-            "image": "http://noblemansion.online/assets/Lock.png",
+            "image": "https://noblemansion.online/assets/Lock.png",
             })
 }
 
@@ -87,7 +87,7 @@ function emptyLessonSelect() {
 }
 
 function loadLessons() {
-    let url = "http://noblemansion.online/data/lessons.json"
+    let url = "https://noblemansion.online/data/lessons.json"
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
