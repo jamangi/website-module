@@ -104,6 +104,8 @@ main {
 }
 
 .lesson {
+    max-height: 195px;
+    max-width: 275px;
     border-radius: 2%;
     box-sizing: border-box;
 }
@@ -113,8 +115,7 @@ main {
 }
 
 .lesson img {
-    max-height: 225px;
-    max-width: 275px;
+    max-height: 195px;
     border-radius: inherit;
 }
 
