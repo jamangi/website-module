@@ -39,7 +39,7 @@ header #logo {
     grid-column: 1/2;
     grid-row: 1/4;
 
-    background: url(../assets/N.png);
+    background: url(assets/N.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50%;
@@ -69,7 +69,7 @@ main {
     grid-row: 3/8;
 
     background-color: #2E031F;
-    background: url(../assets/bloodrose.png);
+    background: url(assets/bloodrose.png);
     background-repeat:no-repeat;
 
     background-size: 200%;
