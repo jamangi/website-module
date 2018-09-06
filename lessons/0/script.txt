@@ -1,0 +1,246 @@
+Quick Start
+
+#############################################################
+
+Chapter 1: Setup
+
+Download sublime <link>
+Make an account on Github
+	- remember your email, it'll come in handy later
+Make a repository named "noblemansion-tutorials"
+	- initialize with README
+	- keep the tab open
+Download git <link>
+	- open commandline and see if you have it already
+	- set of settings screenshots
+Clone repository
+Open sublime and then open repo folder
+	- should see README
+
+Alright, the setup is done. Now we can start the experiment.
+<gif transparent in background> 
+
+#############################################################
+
+Chapter 2: Positioning
+
+HTML, CSS, and Javascript is what a website consists of.
+<blank page>
+HTML creates elements on the page. <dots on the page>
+CSS gives those elements size, color, and position. 
+	<transparent squares, gifs, images, navbar>
+Javascript changes things permanently
+	<pause / reset button> - pauses all gifs
+
+
+Our end goal with this first lesson is to list all of the basics of website construction, and then practice those basics, so that we can build sites easily. 
+
+In this lesson we'll focus on building a minimalist site so that you have a basic model to go on. Later, we'll strip it down and make it better. 
+
+note:
+It's recommended that you plan out your sites before building them; they call this step whiteboarding. Whiteboarding helps to separate the decision making from the actual coding. Example: 
+<hand drawn picture> 
+<ugly but will excite them to realize it in code>
+
+----------------------------------------------
+[layout, pick topics, make 3 other files, write - keep Tutorial page blank]
+[a-tag certain words with data-img and data-desc - href=#]
+[add img#.frame img and desc#.frame]
+[javascript mouse listener]
+
+[layout - html elements, border, css, 
+	  footer-text, header-elements, 
+	  logo link, coolors.co css] 
+-----------------------------------------------
+
+## Instruction Mode ##
+<screeny of blank sublime>
+
+Let's start by structuring the layout of the page. There are various techniques for making a layout with CSS: absolute positioning, flexbox, grid layout; but for now we'll use absolute positioning so that we can cover the basics. Let's make a two new files:
+
+1. index.html
+2. styles.css
+
+In index.html, let's make our skeleton elements:
+1. html
+	- head, title
+2. body
+3. header
+4. footer
+5. main
+6. aside
+7. aside
+<screen shot of index.html> 
+
+Let's open index.html in the browser to see how it's doing at this point.
+<screen shot of empty browser>
+
+It looks completely empty! That's because although the elements exist, they have neither height nor color. Their height is initialized to 0 pixels, and even if they did have height, we couldn't see them due to their lack of color.
+
+Let's give the elements height. Based on our hand-drawn diagram, the header is roughly 30% of the page, the main section is about 50%, and the footer about 20% of the page. 
+
+In styles.css:
+Set * margin and padding to 0
+Set header height to 30%
+Set main, aside height to 50%
+Set footer height to 20%
+Set body * border: 1px solid blue
+Then link styles.css to index.html, and refresh the page. 
+
+
+<screen shot of stacked html elements>
+
+The elements are of the correct size, but notice how they stack along the left side. This is how html elements behave by default. 
+
+Their default position is set to "static". There are four possibilities: 
+	Static
+	Relative
+	Absolute
+	Fixed 
+
+Relative, Absolute, and Fixed allow us to position elements based on "top" and "left" properties. Absolute elements always start at the top left corner of their parent element:
+
+<Picture of box in a box>
+
+This is what we want. The body of the page starts at the top left of the screen, so we can position our elements accordingly.
+
+Set body * {position: absolute}
+Set the width of main to 50%. Width of both asides to 25%.
+Set aside, main top to 30%.
+Set footer top to 80%
+Save and refresh the page. 
+
+<screen shot of missing aside>
+
+We're making good progress, but notice both of the asides are on the left side of the screen. We want to move one to the right, but not the other. We need a way to specify which one we'd like to move.
+
+In index.html, add id="rightaside" and id="leftaside" to either of the asides. 
+In styles.css, set left to 75% for #rightaside
+save both files and refresh the page
+<screenshot of everything aligned>
+
+Now that everything is finally aligned. Let's add a splash of color. 
+Go to Coolors.co, and generate a pallet. 
+<gif of creating colors>
+We'll save the color codes in variables that we can use later.
+In styles.css, create a :root selector, and put the code into variables.
+The variables must have two hyphens in front for it to work.
+<gif of :root variables>
+set the background of header, footer
+set the background of aside
+set the background of main
+You must use var() to access the :root variables.
+<gif of setting background properties, refresh page>
+
+Let's target the Logo, header links, and footer text now, and afterwards we'll give some attention to how the text inside of main is positioned. 
+
+In index.html, create 4 divs inside of the Header element.
+Give each one an id:
+1. logo
+2. topic1
+3. topic2
+4. tutorial
+Inside each of those divs, except for logo, type in the default text.
+<gif of entering default text>
+
+In styles.css, set 
+	#logo width to    20%, margin-left to 10px
+	#logo background url('link to logo'), background-size: 100%
+	#logo background-repeat: none, background-position: center
+
+	#topic1 left to   40%, width to 20%
+	#topic2 left to   60%, width to 20%
+	#tutorial left to 80%, width to 20%
+	#topic1, #topic2, #tutorial
+		top 40%
+	save and refresh the page
+	<gif of setting style to refresh>
+
+Almost done with positioning.
+In index.html, 
+	create a 3 divs in main with the class topic
+		create an h2 tag in each div
+			- type "Heading"
+		create a p tag in each div
+			- paste dummy text <given>
+		<gif of dummy text and page refresh>
+	create one div inside each aside
+		id aside-image
+		id aside-summary
+		both with class aside-content
+	create a p tag inside of footer
+		type  "Created by <name> for <school name>"
+
+Notice the headings mashing together. That's because their position is absolute, so they append to the top left of main. But in this case we want them to scroll rather than be absolute, so we'll make their position relative.
+
+in styles.css
+	set .topic position relative, width 100%, 
+	set main overflow-y: scroll
+	set ::webkit::scrollbar: None
+
+	set .aside-content top 25%, height 50%, width 100%
+
+	set footer p left 40%
+	save and refresh the page
+	(you can turn the border off to get a different view)
+	<gif of css body * {border: none} to refresh>
+
+
+#############################################################
+
+Chapter 3: Functionality
+<wellplayed.gif> centered dark background probably, or silver backlight
+
+
+
+[in html put data-img "http" and data-resources "[]"]
+[capture all topic elements by classname]
+[add mouseenter and mouseleave event listeners]
+	[in mouseenter capture by id aside-image ]
+		[imglink = this.getAttribute('data-img')]
+		[create img]
+		[img.setAttribute('src', imglink)]
+		[aside-image.append(img)]
+	[in mouseenter capture by id aside-summary ]
+		[summary = this.getAttribute('data-summary')]
+		[aside-summary.innerHTML = summary]
+
+	[in mouseleave capture by id aside-image, aside summary]
+		[remove image from aside-image, aside-summary.innerHTML = '']
+
+[change header elements to 'a' tags]
+[create the three files]
+[set href accordingly - dont forget to change href if filenames change]
+[copy index into each of the three files and save]
+
+You now have a generic website that can be used as a template for any later website you'd like to make. I recommend copying the folder.
+
+Create three new files: topic1.html, topic2.html, tutorial.html
+Copy index.html into them and save. 
+----------
+step by step instruction goes here
+
+Note: If javascript doesn't work even though our code looks the same, open the debugger.
+<gif of code not working, then opening the debugger to see >
+
+#############################################################
+
+Chapter 4: Prove It
+<beachdrummer gif>
+
+[push to github]
+[turn on the link]
+
+[download obs]
+[setup preview]
+[settings turned to mp4]
+[start recording]
+ - recreate the website from scratch (use tutorial as guide)
+[upload to youtube - unlisted]
+   [put link in video tag]
+	[put video tag in main, in topic, under a heading]
+[push to github again]
+
+   ***paste video link and github link in input box here***
+	**that's if I have IP-users installed***
+		***might be a lesson two thing***
