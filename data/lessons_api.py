@@ -1,16 +1,18 @@
-from flask import Flask, request, jsonify, abort, Blueprint
+from flask import Flask, request, jsonify, abort
 from flask_cors import CORS
 import os
 from models import storage
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False
-app_views = Blueprint("app_views", __name__)
 app.config["JSONIFY_PRETTYPRINT_REGULAR"] = True
 cors = CORS(app, resources={r"/*": {"origins": "0.0.0.0"}})
 
+@app.route('/')
+def echo():
+    return jsonify({"status": "ok"})
 
-@app_views.route('/lessons/')
+@app.route('/lessons/')
 def all_lessons():
     '''
         Return all lessons
@@ -21,7 +23,7 @@ def all_lessons():
         lesson_dict[k] = v.to_dict()
     return jsonify(lesson_dict)
 
-@app_views.route('/lessons/<int:number>')
+@app.route('/lessons/<int:number>')
 def get_lesson(number):
     '''
         Return the specific lesson
@@ -44,8 +46,6 @@ def after_request(response):
     response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
     response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
     return response
-
-app.register_blueprint(app_views, url_prefix="/data")
 
 if __name__ == '__main__':
     app.run(port = 5000)
