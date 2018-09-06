@@ -8,11 +8,11 @@ app.url_map.strict_slashes = False
 app.config["JSONIFY_PRETTYPRINT_REGULAR"] = True
 cors = CORS(app, resources={r"/*": {"origins": "0.0.0.0"}})
 
-@app.route('/')
+@app.route('/api/')
 def echo():
     return jsonify({"status": "ok"})
 
-@app.route('/lessons/')
+@app.route('/api/lessons/')
 def all_lessons():
     '''
         Return all lessons
@@ -23,7 +23,7 @@ def all_lessons():
         lesson_dict[k] = v.to_dict()
     return jsonify(lesson_dict)
 
-@app.route('/lessons/<int:number>')
+@app.route('/api/lessons/<int:number>')
 def get_lesson(number):
     '''
         Return the specific lesson
