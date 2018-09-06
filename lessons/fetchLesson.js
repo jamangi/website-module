@@ -5,7 +5,7 @@ let lesson = {
 };
 
 function fetchLesson() {
-    let url = "https://noblemansion.online/data/lessons/" + lesson_num;
+    let url = "https://noblemansion.online/api/lessons/" + lesson_num;
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
