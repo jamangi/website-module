@@ -87,7 +87,7 @@ function emptyLessonSelect() {
 }
 
 function loadLessons() {
-    let url = "https://noblemansion.online/data/lessons.json"
+    let url = "https://noblemansion.online/api/lessons"
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
