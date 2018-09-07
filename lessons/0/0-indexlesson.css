@@ -107,6 +107,7 @@ section#right-section * {
     top: 10%;
     left: 10%;
     border: 1px solid gray;
+    border-radius: 5%; 
 
     display: -webkit-flex; /* Safari */
     -webkit-align-items: center; /* Safari 7.0+ */
@@ -123,7 +124,7 @@ section#right-section * {
 
 #img-frame img {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 100%;*/
     border-radius: 2%
 
 }
