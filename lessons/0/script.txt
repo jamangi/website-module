@@ -5,6 +5,9 @@ Quick Start
 Chapter 1: Setup
 
 Download sublime <link>
+	https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64
+
+	https://www.sublimetext.com/3
 Make an account on Github
 	- remember your email, it'll come in handy later
 Make a repository named "noblemansion-tutorials"

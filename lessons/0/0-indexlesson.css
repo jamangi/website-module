@@ -1,0 +1,131 @@
+body {
+    color: white;
+}
+
+:root {
+    --left-size: 70%;
+    --intro-start: 10%;
+    --intro-height: 25%;
+
+    --instruct-height: 100%;
+    --instruct-width: 100%;
+
+    --2-start: calc(var(--intro-start) + var(--intro-height));
+    --2-height: var(--instruct-height);
+
+    --3-start: calc(var(--3-start) + var(--3-height));
+    --3-height: var(--instruct-height);
+
+}
+
+.intro, .instruction {width:100%;}
+
+.intro {
+    position:absolute;
+    top: calc(var(--intro-start));
+    height: var(--intro-height);
+
+    border: 1px solid red;
+}
+
+.intro .gif {
+    position: absolute;
+    height: 100%;
+    width: 17%;
+    left:  calc(50% - 17% / 2);
+    border-bottom: 1px dotted lightgray;
+}
+
+.intro .gif img {
+    position: absolute;
+    top: 10%;
+    
+    height: 100%;
+    width: 100%;
+    
+}
+
+main {
+    border-top: 1px dotted gold;
+    border-bottom: 1px dotted gold;
+}
+
+section#left-section {
+    position: absolute;
+    left: 0;
+    width: var(--left-size);
+    height:100%;
+    /*border: 1px solid gold;*/
+    overflow-y:scroll;
+}
+
+section#right-section {
+    position: absolute;
+    left: var(--left-size);
+    width: 30%;
+    height:100%;
+    border: 1px solid blue;
+}
+
+section#right-section * {
+    position: absolute;
+}
+
+.instruction {
+    position: absolute;
+    height: var(--instruct-height);
+    width: var(--instruct-width);
+    border: 1px solid gold;
+}
+
+.instruction-stage {
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    top: 5%; 
+    left: 5%;
+    border: 1px dotted green;
+}
+
+.instruction-text {
+    padding-top: 5%;
+    position: absolute;
+    top: 25%;
+    height: 50%;
+    width:40%;
+    left:30%;
+    border: 1px solid crimson;
+    word-wrap: normal;
+    text-align: center;
+}
+
+.instruction-text a {color: gold; text-decoration: none;}
+
+#img-frame {
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    border: 1px solid gray;
+
+    display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    display: flex;
+    align-items: center;
+    opacity: .9;
+}
+
+#img-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 2%
+
+}
+
+
+/*  specifics  */
+
+.num2 {
+    top: var(--2-start);
+
+}
