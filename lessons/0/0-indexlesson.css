@@ -13,7 +13,7 @@ body {
     --2-start: calc(var(--intro-start) + var(--intro-height));
     --2-height: var(--instruct-height);
 
-    --3-start: calc(var(--3-start) + var(--3-height));
+    --3-start: calc(var(--2-start) + var(--2-height));
     --3-height: var(--instruct-height);
 
 }
@@ -25,7 +25,7 @@ body {
     top: calc(var(--intro-start));
     height: var(--intro-height);
 
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .intro .gif {
@@ -64,7 +64,7 @@ section#right-section {
     left: var(--left-size);
     width: 30%;
     height:100%;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
 }
 
 section#right-section * {
@@ -75,7 +75,7 @@ section#right-section * {
     position: absolute;
     height: var(--instruct-height);
     width: var(--instruct-width);
-    border: 1px solid gold;
+    /*border: 1px solid gold;*/
 }
 
 .instruction-stage {
@@ -84,19 +84,24 @@ section#right-section * {
     width: 90%;
     top: 5%; 
     left: 5%;
-    border: 1px dotted green;
+    /*border: 1px dotted green;*/
 }
 
 .instruction-text {
     padding-top: 5%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
     position: absolute;
-    top: 25%;
+    top: 18%;
     height: 50%;
     width:40%;
     left:30%;
     border: 1px solid crimson;
+    border-radius: 2%;
     word-wrap: normal;
     text-align: center;
+    overflow-y: scroll;
 }
 
 .instruction-text a {color: gold; text-decoration: none;}
@@ -134,5 +139,8 @@ section#right-section * {
 
 .num2 {
     top: var(--2-start);
+}
 
+.num3 {
+    top: var(--3-start);
 }
