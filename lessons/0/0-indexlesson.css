@@ -112,8 +112,14 @@ section#right-section * {
     -webkit-align-items: center; /* Safari 7.0+ */
     display: flex;
     align-items: center;
-    opacity: .9;
+    opacity: .0;
+    transition: opacity 800ms;
 }
+
+#img-frame.on {opacity: .9;}
+#img-frame.off {opacity: 0;}
+
+
 
 #img-frame img {
     max-width: 100%;
