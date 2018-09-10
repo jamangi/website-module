@@ -5,6 +5,9 @@ Quick Start
 Chapter 1: Setup
 
 Download sublime <link>
+	gif:
+		downloading sublime
+
 	https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64
 
 	https://www.sublimetext.com/3
@@ -27,7 +30,7 @@ Alright, the setup is done. Now we can start the experiment.
 
 Chapter 2: Positioning
 
-HTML, CSS, and Javascript is what a website consists of.
+HTML, CSS, and Javascript are what a website consists of.
 <blank page>
 HTML creates elements on the page. <dots on the page>
 CSS gives those elements size, color, and position. 

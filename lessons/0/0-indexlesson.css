@@ -30,6 +30,8 @@ body {
     --ch2-intro-start: calc(var(--6-start) + var(--6-height));
     --ch2-intro-height:80%;
 
+    --7-start: calc(var(--ch2-intro-start) + var(--ch2-intro-height));
+
 }
 
 .intro, .instruction {width:100%;}
@@ -182,3 +184,5 @@ section#right-section * {
 .num4 {top: var(--4-start);}
 .num5 {top: var(--5-start);}
 .num6 {top: var(--6-start);}
+
+.num7 {top: var(--7-start);}
