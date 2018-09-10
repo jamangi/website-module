@@ -30,7 +30,7 @@ body {
     --ch2-intro-start: calc(var(--6-start) + var(--6-height));
     --ch2-intro-height:80%;
 
-    --7-start: calc(var(--ch2-intro-start) + var(--ch2-intro-height));
+    --7-start: calc(var(--ch2-intro-start) + calc(var(--ch2-intro-height)) + 10%);
 
 }
 
