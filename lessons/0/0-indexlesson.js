@@ -90,5 +90,23 @@ function git() {
     dl.setAttribute('href', href);
 }
 
+function toggleDemo() {
+    let button = document.getElementById('js')
+    button.addEventListener('click', function() {
+        let img = document.getElementById('img-frame-img')
+        let src = img.getAttribute('src')
+        let srcArray = src.split('.')
+        let suffix = srcArray.pop()
+        let nosuffix = src.replace('.'+suffix, '')
+
+        if (suffix === 'gif')
+            img.setAttribute('src', nosuffix + '.png')
+        else
+            img.setAttribute('src', nosuffix + '.gif')
+    })
+}
+
+
 sublimetext();
 git();
+toggleDemo();
