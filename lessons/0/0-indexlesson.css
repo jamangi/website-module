@@ -4,13 +4,15 @@ body {
 
 :root {
     --left-size: 70%;
-    --intro-start: 10%;
     --intro-height: 25%;
+
+    --ch1-intro-start: 10%;
+    --ch1-intro-height: var(--intro-height);
 
     --instruct-height: 100%;
     --instruct-width: 100%;
 
-    --2-start: calc(var(--intro-start) + var(--intro-height));
+    --2-start: calc(var(--ch1-intro-start) + var(--ch1-intro-height));
     --2-height: var(--instruct-height);
 
     --3-start: calc(var(--2-start) + var(--2-height));
@@ -25,33 +27,24 @@ body {
     --6-start: calc(var(--5-start) + var(--5-height));
     --6-height: var(--instruct-height);
 
+    --ch2-intro-start: calc(var(--6-start) + var(--6-height));
+    --ch2-intro-height:80%;
+
 }
 
 .intro, .instruction {width:100%;}
 
 .intro {
     position:absolute;
-    top: calc(var(--intro-start));
-    height: var(--intro-height);
-
     /*border: 1px solid red;*/
 }
 
 .intro .gif {
     position: absolute;
-    height: 100%;
-    width: 17%;
-    left:  calc(50% - 17% / 2);
-    border-bottom: 1px dotted lightgray;
 }
 
 .intro .gif img {
     position: absolute;
-    top: 10%;
-    
-    height: 100%;
-    width: 100%;
-    
 }
 
 main {
@@ -66,6 +59,7 @@ section#left-section {
     height:100%;
     /*border: 1px solid gold;*/
     overflow-y:scroll;
+    overflow-x: show;
 }
 
 section#right-section {
@@ -145,6 +139,43 @@ section#right-section * {
 
 
 /*  specifics  */
+
+.ch1.intro {top: var(--ch1-intro-start); height: var(--ch1-intro-height);}
+.ch2.intro {top: var(--ch2-intro-start); height: var(--ch2-intro-height);}
+
+.ch1.intro .gif {
+    height: 100%;
+    width: 17%;
+    left:  calc(50% - 17% / 2);
+    border-bottom: 1px dotted lightgray;
+}
+
+.ch1.intro .gif img {
+    top: 10%;
+    height: 100%;
+    width: 100%;
+}
+
+.ch2.intro .gif {
+    position: absolute;
+    height: 90%;
+    max-width: 100%;
+    left: 10%;
+    border-top: 5px dotted lightgray;
+    border-bottom: 5px dotted lightgray;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /*border: 2px solid blue;*/
+    text-align: center;
+}
+
+.ch2.intro .gif img {
+    position: relative;
+    min-height: 50%;
+    max-height: 70%;
+    max-width: 100%;
+    border-radius: 10px;
+}
 
 .num2 {top: var(--2-start);}
 .num3 {top: var(--3-start);}
