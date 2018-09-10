@@ -159,8 +159,8 @@ section#right-section * {
 .ch2.intro .gif {
     position: absolute;
     height: 90%;
-    max-width: 100%;
-    left: 10%;
+    width: 100%;
+    left: 0%;
     border-top: 5px dotted lightgray;
     border-bottom: 5px dotted lightgray;
     padding-top: 5%;
