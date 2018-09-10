@@ -16,6 +16,15 @@ body {
     --3-start: calc(var(--2-start) + var(--2-height));
     --3-height: var(--instruct-height);
 
+    --4-start: calc(var(--3-start) + var(--3-height));
+    --4-height: var(--instruct-height);
+
+    --5-start: calc(var(--4-start) + var(--4-height));
+    --5-height: var(--instruct-height);
+
+    --6-start: calc(var(--5-start) + var(--5-height));
+    --6-height: var(--instruct-height);
+
 }
 
 .intro, .instruction {width:100%;}
@@ -90,8 +99,8 @@ section#right-section * {
 .instruction-text {
     padding-top: 5%;
     padding-bottom: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
     position: absolute;
     top: 18%;
     height: 50%;
@@ -137,10 +146,8 @@ section#right-section * {
 
 /*  specifics  */
 
-.num2 {
-    top: var(--2-start);
-}
-
-.num3 {
-    top: var(--3-start);
-}
+.num2 {top: var(--2-start);}
+.num3 {top: var(--3-start);}
+.num4 {top: var(--4-start);}
+.num5 {top: var(--5-start);}
+.num6 {top: var(--6-start);}

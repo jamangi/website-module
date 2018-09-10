@@ -48,7 +48,9 @@
                         <strong>Download Sublime Text Editor</strong>
                         <br><br>
                         To make good websites, you'll need a good text editor. 
-                        Use whichever one you'd like, but I recommend <a id="download"href='https://www.sublimetext.com/3'>sublime</a>
+                        Use whichever one you'd like, but I recommend <a id="downloadSublime"
+                                                                         href='https://www.sublimetext.com/3'
+                                                                         target="_blank">sublime</a>
                     </p>
                 </div>
             </div>
@@ -59,23 +61,83 @@
                        data-img='images/github.gif'>
                         <strong>Create Github Repository</strong>
                         <br><br>
+                        A copy of your code will live on an online repository, to make it easier for others to read, and also to prevent it from becoming lost in time.
+                        <br><br>
                         1. Make an account on github.com<br>
-                        2. Make a <a href="https://github.com/new"> new </a> repository named <strong>noblemansion-sites</strong>
+                        2. Make a <a target="_blank" href="https://github.com/new"> new </a> repository named <strong>noblemansion-sites</strong>
                         <br>
                         3. Make sure to select "initialize with README.md"
                     </p>
                 </div>
             </div>
-                
+
+            <div class='ch1 num4 instruction'>
+                <div class='instruction-stage'>
+                    <p class='instruction-text'
+                       data-img='images/git.gif'>
+                        <strong>Download Git for the command prompt</strong>
+                        <br><br>
+                        To push our work from our local computer to github.com, we'll need to download the 
+                        <a id="downloadGit"
+                           target="_blank" 
+                           href="https://git-scm.com/downloads">git</a> program.
+                        It's good to save and push your work consistently, so other collaborators can see your code,
+                        and to make sure the code never gets lost.<br><br>
+                        
+                        1. Wherever the installer says "Git GUI", please unselect it. We will not be using the Git graphical user interface for this tutorial.<br><br>
+                        2. On Windows, select "Use Git from the Windows Command Prompt" when it asks.<br><br>
+                        3. The rest of the congifuration you can leave as the default.
+                    </p>
+                </div>
             </div>
+
+            <div class='ch1 num5 instruction'>
+                <div class='instruction-stage'>
+                    <p class='instruction-text'
+                       data-img='images/gitclone.gif'>
+                        <strong>Pull repo from github.com to your computer using Git</strong>
+                        <br><br>
+                        Now we can use the power of Git. You'll need to become comfortable with pulling and pushing your code to and from github.com or gitlab.com, so that you can access and edit your code from any computer in the future.<br><br>
+                        
+                        1. Open the command prompt for windows, or terminal for mac.<br>
+                        2. Type "git" and press enter, just to make sure it's been installed.<br>
+                        3. Go to your repository on github.com and copy the repo link.<br>
+                        4. Navigate to an acceptable folder (using the "cd" command), and type git clone [your link], then press enter.<br><br>
+
+                        You should have a copy of the online repository downloaded to your personal computer. We'll spend our time editting this copy, before pushing it back up to github.com.
+                    </p>
+                </div>
+            </div>
+
+            <div class='ch1 num6 instruction'>
+                <div class='instruction-stage'>
+                    <p class='instruction-text'
+                       data-img='images/gitpush.gif'>
+                        <strong>Make a change, and push it to github.com</strong>
+                        <br><br>
+                        We're almost done with setting up our project. Lastly, let's make sure that we can push our code back to github after making changes, because we'll need to do that a lot later on.<br><br>
+                        
+                        1. Open sublime text editor, and then open the folder you cloned from github<br><br>
+                        2. Create a new file, and save it as 0-index.html<br><br>
+                        3. In the command prompt, cd into the project directory, type git config --global user.email [github email], and then type git config --global user.name [your name]. This will set your name and email for all projects. You'll likely only need to do this once. <br><br>
+                        4. Type 'git add -A .' and press enter.<br><br>
+                        5. Enter 'git commit -m "adding index file to project"'<br><br>
+                        6. Enter 'git push origin master'<br><br>
+                        7. Check github to make sure the new 0-index.html file has arrived.<br><br>
+
+                        Now we're all set and ready to begin!
+                    </p>
+                </div>
+            </div>
+
         </section>
 
         
 
     </main>
     <footer></footer>
+    <script type="text/javascript" src="../os.js"></script>
     <script type="text/javascript" src="0-indexlesson.js"></script>
     <script type="text/javascript" src="../fetchLesson.js"></script>
-    <script type="text/javascript" src="../os.js"></script>
 </body>
 </html>

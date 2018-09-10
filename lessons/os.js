@@ -154,5 +154,4 @@ let BrowserDetect = {
 
 };
 BrowserDetect.init();
-sublimetext();
 // document.write('<p class="accent">You\'re using ' + BrowserDetect.browser + ' ' + BrowserDetect.version + ' on ' + BrowserDetect.OS + ' ' + BrowserDetect.OsVersion + ' ' + BrowserDetect.bit + '!</p>');
