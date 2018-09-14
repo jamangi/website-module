@@ -31,6 +31,13 @@ body {
     --ch2-intro-height:80%;
 
     --7-start: calc(var(--ch2-intro-start) + calc(var(--ch2-intro-height)) + 10%);
+    --7-height: var(--instruct-height);
+
+    --8-start: calc(var(--7-start) + calc(var(--7-height)) + 10%);
+    --8-height: var(--instruct-height);
+
+    --9-start: calc(var(--8-start) + var(--8-height));
+    --9-height: var(--instruct-height);
 
 }
 
@@ -133,9 +140,9 @@ section#right-section * {
 
 
 #img-frame img {
+    width: 100%;
     max-width: 100%;
-    max-height: 100%;*/
-    border-radius: 2%
+    max-height: 100%;
 
 }
 
@@ -186,3 +193,6 @@ section#right-section * {
 .num6 {top: var(--6-start);}
 
 .num7 {top: var(--7-start);}
+.num8 {top: var(--8-start);}
+.num9 {top: var(--9-start);}
+.num9 .instruction-text {text-align: left;}

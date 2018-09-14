@@ -28,11 +28,7 @@
 
     <main>
 
-        <section id='right-section'>
-            <div id='img-frame' class='off'>
-
-            </div>
-        </section>
+        
 
         <section id='left-section'> 
             <div class="ch1 intro">
@@ -147,17 +143,77 @@
                         <br><br>
                         Websites consist of HTML, CSS, and Javascript.<br><br>
                         HTML creates elements on a page.
-                        <div class='ch2 html container' id='html'> <div class='ball'></div> <div class='ball'></div> <div class='ball'></div> </div>
+                        <div class='ch2 html container' id='html'> <div class='ball ani'></div> <div class='ball ani'></div> <div class='ball ani'></div> </div>
                         <br><br>
                         CSS gives those elements color, shape, and position.
-                        <div class='ch2 html container' id='css'> <div class='ball'></div> <div class='ball'></div> <div class='ball'></div> </div>
+                        <div class='ch2 html container' id='css'> <div class='ball ani paused'></div> <div class='ball ani paused'></div> <div class='ball ani paused'></div> </div>
                         <br><br>
-                        Javascript allows for functional control over the elements.
+                        Javascript allows for functional control over our elements.
                         <div class='ch2 html container' id='js'><span>Toggle</span></div>
                     </div>
                 </div>
             </div>
 
+            <div class='ch2 num8 instruction'>
+                <div class='instruction-stage'>
+                    <p class='instruction-text'
+                       data-img='../assets/drawing.png'>
+                        <strong>Structure layout of the page</strong>
+                        <br><br>
+                        I'm envisioning something like the <span style="color: gold"> aside </span> image. It consists of five rectangles: the top, the three in the middle, and the bottom (although we might remove the left most rectangle and expand the right most one for simplicity). We can accomplish this layout in many ways, but this time we'll start by making a stack of three horizontal rectangles. <br><br>
+
+                        1. Add html and body tags. Sublime autocompletes with the tab key.<br>
+                        2. Add 3 new elements named: header, main, footer.<br>
+                        3. 
+                    </p>
+                </div>
+            </div>
+
+            <div class='ch2 num9 instruction'>
+                <div class='instruction-stage'>
+                    <p class='instruction-text'
+                       data-img='images/layout.gif'>
+                        <strong>Create some elements</strong>
+                        <br><br>
+
+                        1. In 0-index.html Add html and body tags (sublime autocompletes with the tab key).<br>
+                        2. Nest 3 new elements within the body element: header, main, and footer, in that order.<br>
+                        3. Nest a style element within the head element (not the header element), and apply these css rules:<br><br>
+                        * {padding: 0; margin: 0;} <br>
+                        html {height: 100%} <br>
+                        body {height: 100%; background: gold;}<br>
+                        header {height: 20%; background: #260F26;}<br>
+                        main{height: 70%; background: green;}<br>
+                        footer{height: 10%; background: #260F26;}<br><br>
+                        First, where it says * {padding: 0; margin: 0}, it means that we want to remove the default padding inside and outside of our elements. It's difficult to make precise calculations with those invisible influences lingering about.<br><br>
+                        Next, notice how we set both the html element and the body element height to 100%. These elements don't have a height value by default, so if you were to remove or forget those lines, then when the elements nested inside of them (like header, main, and footer) try to use css rules like "height: 20%", nothing will happen.<br><br>
+                        You can get snazzy color schemes from <a target='_blank' href="https://coolors.co/app"> coolors.co</a>, and we'll look into this later.
+                    </p>
+                </div>
+            </div>
+
+            <div class='ch2 num10 instruction'>
+                <div class='instruction-stage'>
+                    <p class='instruction-text'
+                       data-img='../assets/drawing.png'>
+                        <strong>Create more elements</strong>
+                        <br><br>
+                        1. Nest two new elements within the main element: article, and aside.
+                        2. In the style tag, add these new rules:<br><br>
+                        article {height: 100%; background: #86CB92; width: 60%; float:left;}<br>
+                        aside {height: 100%; background: #71B48D;   width: 40%; float: right;}<br><br>
+
+                        We have to tell the article and aside to float left or float right, because by default they'll want to stack on top of each other vertically, just like the header, main, and footer elements did. We can use the float attribute to make them line up side by side.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id='right-section'>
+            <div id='img-frame' class='off'>
+
+            </div>
         </section>
 
         

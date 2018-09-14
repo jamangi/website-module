@@ -99,11 +99,27 @@ function toggleDemo() {
         let suffix = srcArray.pop()
         let nosuffix = src.replace('.'+suffix, '')
 
-        if (suffix === 'gif')
+        if (suffix === 'gif'){
             img.setAttribute('src', nosuffix + '.png')
-        else
+            pause()
+        }
+        else{
             img.setAttribute('src', nosuffix + '.gif')
+            unpause()
+        }
     })
+}
+
+function pause() {
+    let animations = document.getElementsByClassName('ani')
+    for (let ele of animations) 
+        ele.className = 'ball ani paused'
+}
+
+function unpause() {
+    let animations = document.getElementsByClassName('ani')
+    for (let ele of animations) 
+        ele.className = 'ball ani'
 }
 
 
