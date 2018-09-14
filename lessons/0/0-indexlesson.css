@@ -39,6 +39,9 @@ body {
     --9-start: calc(var(--8-start) + var(--8-height));
     --9-height: var(--instruct-height);
 
+    --10-start: calc(var(--9-start) + var(--9-height));
+    --10-height: var(--instruct-height);
+
 }
 
 .intro, .instruction {width:100%;}
@@ -196,3 +199,5 @@ section#right-section * {
 .num8 {top: var(--8-start);}
 .num9 {top: var(--9-start);}
 .num9 .instruction-text {text-align: left;}
+
+.num10 {top: var(--10-start);}
