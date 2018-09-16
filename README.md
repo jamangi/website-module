@@ -6,26 +6,35 @@ Tutorials for how to build websites
 ## Topics Covered 
 <details>
  <summary>Basics</summary>
-HTML
-CSS
-Javascript
-Python
+ <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+    <li>Python</li>
+     
+ </ul>
 </details>
 <details>
  <summary>Algorithms</summary>
-Loops
-Lists
-Dictionaries
+ <ul>
+    <li>Loops</li>
+    <li>Lists</li>
+    <li>Dictionaries</li>  
+ </ul>
 </details>
 <details>
  <summary>Requests</summary>
-APIs
-AJAX
+ <ul>
+    <li>APIs</li>
+    <li>AJAX</li>
+ </ul>
 </details>
 <details>
  <summary>Deployment</summary>
-Github Pages
-Digital Ocean Droplets
-Nginx
-Let's encrypt SSL
+ <ul>
+    <li>Github Pages</li>
+    <li>Digital Ocean Droplets</li>
+    <li>Nginx</li>
+    <li>Let's encrypt SSL</li>
+ </ul>
 </details>
