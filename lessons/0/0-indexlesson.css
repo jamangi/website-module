@@ -3,8 +3,8 @@ body {
 }
 
 :root {
-    --left-size: 70%;
-    --intro-height: 25%;
+    --left-size: 60%;
+    --intro-height: 80%;
 
     --ch1-intro-start: 10%;
     --ch1-intro-height: var(--intro-height);
@@ -28,7 +28,7 @@ body {
     --6-height: var(--instruct-height);
 
     --ch2-intro-start: calc(var(--6-start) + var(--6-height));
-    --ch2-intro-height:80%;
+    --ch2-intro-height:var(--intro-height);
 
     --7-start: calc(var(--ch2-intro-start) + calc(var(--ch2-intro-height)) + 10%);
     --7-height: var(--instruct-height);
@@ -42,6 +42,14 @@ body {
     --10-start: calc(var(--9-start) + var(--9-height));
     --10-height: var(--instruct-height);
 
+    --11-start: calc(var(--10-start) + var(--10-height));
+    --11-height: var(--instruct-height);
+
+    --12-start: calc(var(--11-start) + var(--11-height));
+    --12-height: var(--instruct-height);
+
+    --ch3-intro-start: calc(var(--12-start) + var(--12-height));
+    --ch3-intro-height:var(--intro-height);
 }
 
 .intro, .instruction {width:100%;}
@@ -77,7 +85,7 @@ section#left-section {
 section#right-section {
     position: absolute;
     left: var(--left-size);
-    width: 30%;
+    width: calc(100% - var(--left-size));
     height:100%;
     /*border: 1px solid blue;*/
 }
@@ -103,19 +111,19 @@ section#right-section * {
 }
 
 .instruction-text {
-    padding-top: 5%;
+    padding-top: 2%;
     padding-bottom: 1%;
     padding-left: 2%;
     padding-right: 2%;
     position: absolute;
     top: 18%;
     height: 50%;
-    width:40%;
-    left:30%;
+    width:80%;
+    left:10%;
     border: 1px solid crimson;
     border-radius: 2%;
     word-wrap: normal;
-    text-align: center;
+    text-align: left;
     overflow-y: scroll;
 }
 
@@ -154,21 +162,10 @@ section#right-section * {
 
 .ch1.intro {top: var(--ch1-intro-start); height: var(--ch1-intro-height);}
 .ch2.intro {top: var(--ch2-intro-start); height: var(--ch2-intro-height);}
+.ch3.intro {top: var(--ch3-intro-start); height: var(--ch3-intro-height);}
 
-.ch1.intro .gif {
-    height: 100%;
-    width: 17%;
-    left:  calc(50% - 17% / 2);
-    border-bottom: 1px dotted lightgray;
-}
 
-.ch1.intro .gif img {
-    top: 10%;
-    height: 100%;
-    width: 100%;
-}
-
-.ch2.intro .gif {
+.ch1.intro .gif, .ch2.intro .gif, .ch3.intro .gif {
     position: absolute;
     height: 90%;
     width: 100%;
@@ -181,13 +178,15 @@ section#right-section * {
     text-align: center;
 }
 
-.ch2.intro .gif img {
+.ch1.intro .gif img, .ch2.intro .gif img, .ch3.intro .gif img {
     position: relative;
     min-height: 50%;
     max-height: 70%;
     max-width: 100%;
     border-radius: 10px;
 }
+
+.css_rules {color:#86CB92;}
 
 .num2 {top: var(--2-start);}
 .num3 {top: var(--3-start);}
@@ -196,8 +195,10 @@ section#right-section * {
 .num6 {top: var(--6-start);}
 
 .num7 {top: var(--7-start);}
+.num7 .instruction-text {text-align: center;}
 .num8 {top: var(--8-start);}
 .num9 {top: var(--9-start);}
-.num9 .instruction-text {text-align: left;}
 
 .num10 {top: var(--10-start);}
+.num11 {top: var(--11-start);}
+.num12 {top: var(--12-start);}
