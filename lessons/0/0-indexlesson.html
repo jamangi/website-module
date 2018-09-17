@@ -186,8 +186,8 @@
                         * {padding: 0; margin: 0;} <br>
                         html {height: 100%} <br>
                         body {height: 100%; background: gold;}<br>
-                        header {height: 20%; background: #260F26;}<br>
-                        main{height: 70%; background: green;}<br>
+                        header {height: 10%; background: #260F26;}<br>
+                        main{height: 80%; background: green;}<br>
                         footer{height: 10%; background: #260F26;}
                         </span>
                         <br><br>
@@ -266,7 +266,7 @@
                         #topic1, #topic2, #topic3, footer<br> {<br>
                             color: lightgray;<br>
                             box-sizing: border-box;<br>
-                            padding-top: 4%;<br>
+                            padding-top: 2%;<br>
                         }<br>
                         footer {text-align: center; padding-top:2%;}<br><br>
                         </span>
@@ -282,6 +282,73 @@
                     <h3> Chapter 3 </h3> 
                     <h1> Functionality </h1>
                     <img src="../assets/futuresmoker.gif"> 
+                </div>
+            </div>
+
+            <div class='ch3 num13 instruction'>
+                <div class='instruction-stage'>
+                    <p class='instruction-text'
+                       data-img='images/preview.gif'>
+                        <strong>Preview</strong>
+                        <br><br>
+                        Until the later algorithm lessons, the Javascript code may seem a bit mysterious or confusing. For now I'll give you a Javascript code snippet to plug into your website, which will create this nice image-change effect when the mouse hovers over a new section.
+                        
+                    </p>
+                </div>
+            </div>
+
+            <div class='ch3 num14 instruction'>
+                <div class='instruction-stage'>
+                    <p class='instruction-text'
+                       data-img='images/hover.gif'>
+                        <strong>Hover functionality</strong>
+                        <br><br>
+                        1. Collect more images for your website, and save them in the images folder.<br>
+                        2. Add a <span class="css_rules">data-img</span> attribute to each <span class="css_rules">section</span> tag, and set its value equal to the path of the image you would like to show.<br>
+                        3. Nest a <span class="css_rules">script</span> element underneath everything in the body tag, and apply this Javascript within it:<br><br>
+                        <span class="css_rules">
+                            let sideImg = document.getElementById("sideImg")<br>
+                            let allSections = document.getElementsByTagName("section")<br><br>
+
+                            for (let section of allSections) {<br>
+                                section.addEventListener("mouseenter", changeImg)<br>
+                            }<br><br>
+
+                            function changeImg() {<br>
+                                let imgLink = this.getAttribute("data-img")<br>
+                                sideImg.setAttribute("src", imgLink)<br>
+                            }<br><br>
+                        </span>
+                        4. Nest a <span class="css_rules">span</span> element with the class "helper" within the aside element (this will help center the img), along with an <span class="css_rules">img</span> element with an <span class="css_rules">id</span> of "sideImg". <br>
+                        5. Add this CSS to the <span class="css_rules">style</span> element.<br><br>
+                        <span class="css_rules">
+                            img {border-radius: 1%;}<br>
+                            aside {text-align: center;}<br>
+                            .helper {<br>
+                                display: inline-block;<br>
+                                width: 0%;<br>
+                                height: 100%;<br>
+                                vertical-align: middle;<br>
+                            }<br>
+                            aside img { <br>
+                                max-width: 95%; max-height: 99%; opacity: 0;<br>
+                                transition: opacity 500ms; vertical-align: middle;<br>
+                            }<br>
+                            main:hover aside img {opacity: 1;}<br><br>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class='ch3 num15 instruction'>
+                <div class='instruction-stage'>
+                    <p class='instruction-text'
+                       data-img='images/preview.gif'>
+                        <strong>Metadata and hyperlinks</strong>
+                        <br><br>
+                        The page's title, tab logo, and viewport
+                        
+                    </p>
                 </div>
             </div>
 

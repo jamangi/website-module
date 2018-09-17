@@ -50,6 +50,15 @@ body {
 
     --ch3-intro-start: calc(var(--12-start) + var(--12-height));
     --ch3-intro-height:var(--intro-height);
+
+    --13-start: calc(var(--ch3-intro-start) + var(--ch3-intro-height));
+    --13-height: var(--instruct-height);
+
+    --14-start: calc(var(--13-start) + var(--13-height));
+    --14-height: var(--instruct-height);
+
+    --15-start: calc(var(--14-start) + var(--14-height));
+    --15-height: var(--instruct-height);
 }
 
 .intro, .instruction {width:100%;}
@@ -202,3 +211,7 @@ section#right-section * {
 .num10 {top: var(--10-start);}
 .num11 {top: var(--11-start);}
 .num12 {top: var(--12-start);}
+
+.num13 {top: var(--13-start);}
+.num14 {top: var(--14-start);}
+.num15 {top: var(--15-start);}
