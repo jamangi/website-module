@@ -24,8 +24,6 @@ function emptyFrame() {
 function download(name, anchorID, defaultLink, win64, win32, mac) {
     let dl = document.getElementById(anchorID);
     let def = defaultLink;
-    let win64 = win64;
-    let win32 = win32;
     let osx = mac;
     let href;
     switch (BrowserDetect.OS) {
