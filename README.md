@@ -1,5 +1,5 @@
 # website-module
-Tutorials for how to build websites
+Homemade tutorial for building websites
 
 ![preview](https://github.com/jamangi/website-module/blob/master/lessons/0/images/preview.gif)
 
