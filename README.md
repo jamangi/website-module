@@ -1,5 +1,6 @@
 # website-module
-Homemade tutorial for building websites:
+Homemade tutorial for building websites
+
 Hosted on Github Pages: https://jamangi.github.io/website-module/
 
 ![preview](https://github.com/jamangi/website-module/blob/master/lessons/0/images/preview.gif)
