@@ -59,6 +59,9 @@ body {
 
     --15-start: calc(var(--14-start) + var(--14-height));
     --15-height: var(--instruct-height);
+
+    --16-start: calc(var(--15-start) + var(--15-height));
+    --16-height: var(--instruct-height);
 }
 
 .intro, .instruction {width:100%;}
@@ -195,7 +198,7 @@ section#right-section * {
     border-radius: 10px;
 }
 
-.css_rules {color:#86CB92;}
+
 
 .num2 {top: var(--2-start);}
 .num3 {top: var(--3-start);}
@@ -215,3 +218,4 @@ section#right-section * {
 .num13 {top: var(--13-start);}
 .num14 {top: var(--14-start);}
 .num15 {top: var(--15-start);}
+.num16 {top: var(--16-start);}

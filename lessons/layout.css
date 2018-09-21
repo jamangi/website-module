@@ -80,11 +80,14 @@ main {
 
 
 
-::-webkit-scrollbar { 
+/*::-webkit-scrollbar { 
     display: none; 
-}
+}*/
 
 footer {
     grid-row: 8/9;
     grid-column: 1/2;
 }
+
+.css_rules {color:#86CB92;}
+.filename {color: var(--pink);}
