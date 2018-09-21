@@ -62,6 +62,9 @@ body {
 
     --16-start: calc(var(--15-start) + var(--15-height));
     --16-height: var(--instruct-height);
+
+    --ch4-intro-start: calc(var(--16-start) + var(--16-height));
+    --ch4-intro-height:var(--intro-height);
 }
 
 .intro, .instruction {width:100%;}
@@ -175,9 +178,10 @@ section#right-section * {
 .ch1.intro {top: var(--ch1-intro-start); height: var(--ch1-intro-height);}
 .ch2.intro {top: var(--ch2-intro-start); height: var(--ch2-intro-height);}
 .ch3.intro {top: var(--ch3-intro-start); height: var(--ch3-intro-height);}
+.ch4.intro {top: var(--ch4-intro-start); height: var(--ch4-intro-height);}
 
 
-.ch1.intro .gif, .ch2.intro .gif, .ch3.intro .gif {
+.intro .gif {
     position: absolute;
     height: 90%;
     width: 100%;
@@ -190,7 +194,7 @@ section#right-section * {
     text-align: center;
 }
 
-.ch1.intro .gif img, .ch2.intro .gif img, .ch3.intro .gif img {
+.intro .gif img {
     position: relative;
     min-height: 50%;
     max-height: 70%;
